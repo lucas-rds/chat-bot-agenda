@@ -1,0 +1,34 @@
+{
+  "name": "agenbot",
+  "version": "1.0.0",
+  "description": "POC Bot",
+  "main": "app.js",
+  "dependencies": {
+    "azure-storage": "^2.8.1",
+    "bluebird": "^3.5.1",
+    "bot-tester": "^3.4.5",
+    "botbuilder": "^3.13.1",
+    "botbuilder-azure": "^3.0.4",
+    "chai": "^4.1.2",
+    "dotenv": "^5.0.1",
+    "nyc": "^11.6.0",
+    "restify": "^5.0.0",
+    "sinon": "^4.5.0"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "zip-folder": "^1.0.0"
+  },
+  "scripts": {
+    "test": "nyc mocha test/**/*.test.js --timeout=20000 --bail"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "report-dir": "./test/coverage"
+  },
+  "author": "Lucas Rodrigues",
+  "license": "ISC"
+}
